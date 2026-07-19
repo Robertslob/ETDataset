@@ -10,6 +10,8 @@ def prepare_input(df):
     Returns:
     pd.DataFrame: The prepared DataFrame.
     """
+    df = df.copy()
+    
     # Convert date column to datetime
     df['date'] = pd.to_datetime(df['date'])
     
